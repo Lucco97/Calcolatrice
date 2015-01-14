@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Calcolatrice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,226 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYQ-uJ-Uch">
+                                <rect key="frame" x="272" y="464" width="80" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SetOperationPlus" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0ZC-JR-bSJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMe-i9-grl">
+                                <rect key="frame" x="272" y="200" width="80" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <state key="normal" title="÷">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SetOperationDivide" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dad-9D-sgs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJ4-fc-Lyz">
+                                <rect key="frame" x="272" y="288" width="80" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <state key="normal" title="x">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SetOperationMultiply" destination="vXZ-lx-hvc" eventType="touchUpInside" id="h3T-bn-E48"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgc-N8-4y6">
+                                <rect key="frame" x="272" y="108" width="79" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <state key="normal" title="CE">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Delete" destination="vXZ-lx-hvc" eventType="touchUpInside" id="b9N-kj-wGl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="257" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZN-X9-bzx">
+                                <rect key="frame" x="41" y="151" width="46" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="7">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="InsertNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8k2-Mm-s7c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="258" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijK-Io-nNX">
+                                <rect key="frame" x="122" y="151" width="46" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="8">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="InsertNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="b47-Np-Me7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="259" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9G-wY-3XJ">
+                                <rect key="frame" x="203" y="151" width="46" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="9">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="InsertNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eVn-EI-gCo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="254" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wd-9a-oHr">
+                                <rect key="frame" x="41" y="250" width="46" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="InsertNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BSR-Th-L63"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="255" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjQ-TK-4Sa">
+                                <rect key="frame" x="122" y="250" width="46" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="InsertNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="85R-Yn-Rmg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="256" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGh-q0-E6k">
+                                <rect key="frame" x="203" y="250" width="46" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="InsertNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="w1u-6D-HTq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="251" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWO-be-V77">
+                                <rect key="frame" x="41" y="348" width="46" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="InsertNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sle-LH-nlx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="252" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6E-oa-8Sb">
+                                <rect key="frame" x="122" y="348" width="46" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="InsertNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QBJ-JB-ds4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="253" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOG-xY-AZT">
+                                <rect key="frame" x="203" y="348" width="46" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="InsertNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kDa-xC-j2s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHN-cG-t0m">
+                                <rect key="frame" x="272" y="376" width="80" height="108"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <state key="normal" title="- ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SetOperationMinun" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0XS-JA-eS2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="od8-6I-oxL">
+                                <rect key="frame" x="41" y="28" width="82" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwK-lv-J5D">
+                                <rect key="frame" x="131" y="28" width="25" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvH-sz-In9">
+                                <rect key="frame" x="164" y="28" width="82" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVq-h8-5ZC">
+                                <rect key="frame" x="254" y="28" width="116" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="250" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSM-FM-Foi">
+                                <rect key="frame" x="82" y="459" width="46" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="0">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="InsertNumber:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fwc-H0-hWE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZ6-QW-e2I">
+                                <rect key="frame" x="163" y="459" width="46" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="=">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Add" destination="vXZ-lx-hvc" eventType="touchUpInside" id="w8B-dz-JIw"/>
+                                    <action selector="Divide" destination="vXZ-lx-hvc" eventType="touchUpInside" id="659-Rs-1jt"/>
+                                    <action selector="Moltiply" destination="vXZ-lx-hvc" eventType="touchUpInside" id="b9g-q6-DgV"/>
+                                    <action selector="Subtract" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jpl-Mc-LuO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HHN-cG-t0m" firstAttribute="trailing" secondItem="NYQ-uJ-Uch" secondAttribute="trailing" constant="8" id="H4L-o9-aah"/>
+                            <constraint firstItem="HHN-cG-t0m" firstAttribute="trailing" secondItem="yMe-i9-grl" secondAttribute="trailing" constant="8" id="fFy-PX-gPs"/>
+                            <constraint firstItem="iZN-X9-bzx" firstAttribute="leading" secondItem="6Wd-9a-oHr" secondAttribute="leading" id="gdw-p9-GT8"/>
+                            <constraint firstItem="HHN-cG-t0m" firstAttribute="trailing" secondItem="cgc-N8-4y6" secondAttribute="trailing" constant="8" id="hIu-th-7tO"/>
+                            <constraint firstItem="iZN-X9-bzx" firstAttribute="leading" secondItem="bWO-be-V77" secondAttribute="leading" id="lYd-Qd-La2"/>
+                            <constraint firstItem="HHN-cG-t0m" firstAttribute="trailing" secondItem="IJ4-fc-Lyz" secondAttribute="trailing" constant="8" id="wE3-Iy-qRf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eight" destination="ijK-Io-nNX" id="8PF-8u-WPp"/>
+                        <outlet property="firstOperand" destination="od8-6I-oxL" id="I4E-CW-10B"/>
+                        <outlet property="five" destination="LjQ-TK-4Sa" id="IJq-fz-lwP"/>
+                        <outlet property="four" destination="6Wd-9a-oHr" id="UZ0-Pi-TMD"/>
+                        <outlet property="nine" destination="K9G-wY-3XJ" id="ndf-z4-ctL"/>
+                        <outlet property="one" destination="bWO-be-V77" id="mgy-L9-LzA"/>
+                        <outlet property="operation" destination="QwK-lv-J5D" id="Djt-hr-ut4"/>
+                        <outlet property="result" destination="QVq-h8-5ZC" id="rLr-GB-7L3"/>
+                        <outlet property="secondOperand" destination="tvH-sz-In9" id="43d-va-842"/>
+                        <outlet property="seven" destination="iZN-X9-bzx" id="PzB-3f-dn9"/>
+                        <outlet property="six" destination="qGh-q0-E6k" id="8aB-Oy-M7m"/>
+                        <outlet property="three" destination="fOG-xY-AZT" id="1nY-0u-kbR"/>
+                        <outlet property="two" destination="n6E-oa-8Sb" id="zSs-So-895"/>
+                        <outlet property="zero" destination="ZSM-FM-Foi" id="75R-9t-T1k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="516" y="231"/>
         </scene>
     </scenes>
 </document>

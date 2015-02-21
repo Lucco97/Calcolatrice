@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Calcolatrice
 //
-//  Created by Fabio Luccon on 12/01/15.
+//  Created by Fabio Luccon and Andrea Spada on 12/01/15.
 //  Copyright (c) 2015 Fabio Luccon. All rights reserved.
 //
 

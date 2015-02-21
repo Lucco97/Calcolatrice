@@ -15,6 +15,7 @@ class ViewController: UIViewController
     var readyForOperation = false //flag to indicate if all fields are ready to the operation
     var firstOperandReady = false //flag to indicate if the first operand is already set
     var secondOperandReady = false //flag to indicate if the second operand is already set
+    var sciuar = false
     
     var firstOp = 0 //variable to save the first operand
     var secondOp = 0 //variable to save the second operand
@@ -66,6 +67,7 @@ class ViewController: UIViewController
             if (tag == 0) && (firstOperation)
             {
                 firstOperandReady = true
+                sciuar = true
                 return
             }
             else if firstOperation
@@ -93,6 +95,7 @@ class ViewController: UIViewController
             if (tag == 0) && (firstOperation)
             {
                 secondOperandReady = true
+                sciuar = false
                 readyForOperation = true
                 return
             }
@@ -112,6 +115,7 @@ class ViewController: UIViewController
                 firstOperation = false
                 secondOperandReady = true
                 readyForOperation = true
+                sciuar = true
                 return
             }
         }
@@ -176,6 +180,7 @@ class ViewController: UIViewController
             var first : Int = firstOperand.text!.toInt()!
             var second : Int = secondOperand.text!.toInt()!
             var op : String = operation.text!
+            sciuar = false
             if op == "+"
             {
                 var res = first + second
@@ -195,6 +200,7 @@ class ViewController: UIViewController
             var first : Int = firstOperand.text!.toInt()!
             var second : Int = secondOperand.text!.toInt()!
             var op : String = operation.text!
+            sciuar = true
             if op == "-"
             {
                 var res = first - second
@@ -214,6 +220,7 @@ class ViewController: UIViewController
             var first : String = firstOperand.text!
             var second : String = secondOperand.text!
             var op : String = operation.text!
+            sciuar = false
             
             if op == "÷"
             {

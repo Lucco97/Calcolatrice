@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BEEF04B3-513F-41F0-AEEC-D25D9E8C34E1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Calcolatrice</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CC516181EAD42890207FE980674A4CEEDE108B31</key>
+		<string>https://github.com/Lucco97/Calcolatrice.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Calcolatrice.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CC516181EAD42890207FE980674A4CEEDE108B31</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Lucco97/Calcolatrice.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CC516181EAD42890207FE980674A4CEEDE108B31</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CC516181EAD42890207FE980674A4CEEDE108B31</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Calcolatrice</string>
+		</dict>
+	</array>
+</dict>
+</plist>
